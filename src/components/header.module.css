@@ -1,0 +1,11 @@
+.heder{
+    background-color: #c3a931;
+    /* background-color: #f1f1f1; */
+
+}
+.inpt{
+    width: 80%;
+    outline: none;
+    border: none;
+    background: none;
+}

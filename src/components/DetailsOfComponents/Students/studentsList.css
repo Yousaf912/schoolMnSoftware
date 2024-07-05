@@ -1,0 +1,25 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.serch button{
+padding: 1px 2px;
+border: none;
+outline: none;
+background-color: #c3a931;
+color: white;
+border-radius: 5px;
+}
+.serch input{
+    padding-left: 2px;
+    margin-right: 2px;
+    border-radius: 5px;
+    border: 2px solid #c3a931;
+    outline: none;
+}
+table{
+    width: 100%;
+}
+.tstudnt{
+    margin-right: 0px;
+}
