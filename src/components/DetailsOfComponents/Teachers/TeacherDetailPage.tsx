@@ -43,7 +43,7 @@ export default function () {
                         <h6>Go back</h6>
                     </div>
 
-                    {singlTeacher.map((val: any, i: any) => {
+                    {singlTeacher.map((val: any) => {
                         return (
                             <>
 

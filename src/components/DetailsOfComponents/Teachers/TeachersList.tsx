@@ -1,7 +1,7 @@
 
 import { MdGroups } from "react-icons/md";
 import './teacherslist.css'
-import { get, getDatabase, onValue, ref } from "firebase/database";
+import { getDatabase, onValue, ref } from "firebase/database";
 import app from "../../../config/firbaseconfig";
 import { useContext, useEffect, useState } from "react";
 import { Store } from "../../ContexStore/contex";

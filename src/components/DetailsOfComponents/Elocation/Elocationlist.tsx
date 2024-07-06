@@ -9,25 +9,26 @@ export default function Elocationlist() {
     const [spiner, setspiner] = useState(true)
     const db = getDatabase(app);
     const [cls, setcls] = useState<any>('');
-    const [syllabus, setsylabus] = useState<any>([]);
+    const [syllabus, setsylabus] = useState<any>();
 
     const getdata = () => {
         const refrence = ref(db, `elocation/${cls}/`);
-        cls ?
-            get(refrence).then((dta: any) => {
-                dta &&
-                    setsylabus(Object.values(dta.val()));
+        
+        get(refrence).then((dta: any) => {
 
-                setspiner(false)
-            }).catch((eror) => {
-                setspiner(false)
-                setsylabus([])
-                toast.error(`TimeTable Of ${cls} is not Present`)
-                setcls('')
-            })
-            : setspiner(false)
+            setsylabus(Object.values(dta.val()));
+
+            setspiner(false)
+        }).catch(() => {
+            setspiner(false)
+            setsylabus([])
+            toast.error(`TimeTable Of ${cls} is not Present`)
+            setcls('')
+        })
+
     }
-    console.log(syllabus);
+
+console.log(syllabus);
 
 
     const statechange = () => {
@@ -76,18 +77,21 @@ export default function Elocationlist() {
                                         <th scope="col">Sir Name</th>
                                         <th scope="col">Subject Name</th>
                                         <th scope="col">Time</th>
-
+                                        <th>Note</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    {syllabus.length != 0 && syllabus.map((dta:any,i:any)=>{
 
-                                    <tr key={i}>
-                                        <th scope="row">{i+1}</th>
-                                        <td>{dta.teacher}</td>
-                                        <td>{dta.subjname}</td>
-                                        <td>{`from  ${dta.starting} to  ${dta.endtime}`}</td>
-                                    </tr>
+
+                                <tbody>
+                                    {syllabus.map((dta: any, i: any) => {
+                                        return(
+                                        <tr key={i}>
+                                            <th scope="row">{i + 1}</th>
+                                            <td>{dta.teacher}</td>
+                                            <td>{dta.subjname}</td>
+                                            <td>{`from  ${dta.starting} to  ${dta.endtime}`}</td>
+                                            <td>{dta.dis}</td>
+                                        </tr>)
                                     })}
 
 

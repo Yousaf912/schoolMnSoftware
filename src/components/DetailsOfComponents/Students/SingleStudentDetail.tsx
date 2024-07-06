@@ -1,13 +1,11 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect,  useState } from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Store } from "../../ContexStore/contex";
-import { getDatabase, onValue, ref, set } from "firebase/database";
+import { getDatabase, onValue, ref } from "firebase/database";
 import app from "../../../config/firbaseconfig";
 import Spiner from "../../Spiner";
 import './editstudent.module.css';
-import style from './editstudent.module.css';
-import { FaAddressCard } from "react-icons/fa6";
-import { toast, ToastContainer } from "react-toastify";
+
 
 
 export default function () {

@@ -1,17 +1,16 @@
 
-import { useContext, useRef, useState } from 'react';
+import {  useRef, useState } from 'react';
 import { FaAddressCard } from "react-icons/fa6";
 import './Addstudent.css';
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import { sendData } from '../../../config/firbasemethds';
-import { Store } from '../../ContexStore/contex';
-import { get, getDatabase, ref, set } from 'firebase/database';
+
+import {  getDatabase, ref, set } from 'firebase/database';
 import app from '../../../config/firbaseconfig';
 import { ToastContainer, toast } from 'react-toastify';
 
 
 export default function Addstudents() {
-    const contextval = useContext(Store);
+    // const contextval = useContext(Store);
 
     const [arrowup, setarrow] = useState(true);
     const name = useRef<any>()
@@ -43,7 +42,7 @@ export default function Addstudents() {
                 toast.error("All fields are required!")
         } else {
             const refrence = ref(db, `Students/${obj.classname}/${obj.name}`)
-            set(refrence, obj).then((dt) => {
+            set(refrence, obj).then(() => {
                 toast.success(`${obj.name} is added`)
                 name.current.value = ''
                 mail.current.value = ''

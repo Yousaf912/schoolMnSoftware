@@ -7,7 +7,9 @@
 .min {
     background-color: #f1f1f1;
     width: 220px;
-    position: fixed;
+    /* height: 100%; */
+    /* position: fixed; */
+    position: absolute;
 }
 
 .ulstyl li {

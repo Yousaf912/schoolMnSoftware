@@ -1,15 +1,14 @@
 
 import { PiStudentFill, PiExam } from "react-icons/pi";
-import { FaChalkboardTeacher,FaHome ,FaSchool,FaClipboardList} from "react-icons/fa";
+import { FaChalkboardTeacher,FaHome ,FaClipboardList} from "react-icons/fa";
 import style from './sidebar.module.css';
-import './sidebar.module.css'
 import logo from '../../assets/log-removebg-preview.png';
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
-import { useContext, useState } from "react";
+import { useContext, } from "react";
 import { Link } from "react-router-dom";
 import { Store } from "../ContexStore/contex";
 import { MdSubject,MdOutlineCoPresent, MdFormatListBulletedAdd } from "react-icons/md";
-import { list } from "firebase/storage";
+
 
 
 

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import AddExames from "../DetailsOfComponents/Exames/AddExames";
 import AddStudents from "../DetailsOfComponents/Students/AddStudents";
 import AddSubjects from "../DetailsOfComponents/Subjects/AddSubjects";

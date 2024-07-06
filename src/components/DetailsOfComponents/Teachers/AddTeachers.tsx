@@ -4,7 +4,7 @@ import './Addteachers.css'
 import { useRef, useState } from 'react';
 import { FaAddressCard } from "react-icons/fa6";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import { sendData } from '../../../config/firbasemethds';
+
 import { getDatabase, ref, set } from 'firebase/database';
 import app from '../../../config/firbaseconfig';
 import { ToastContainer, toast } from 'react-toastify';
@@ -15,7 +15,6 @@ export default function Addteachers() {
   const name = useRef<any>();
   const mail = useRef<any>();
   const dob = useRef<any>();
-  const gendr = useRef<any>();
   const number = useRef<any>();
   const adres = useRef<any>();
   const dgre1 = useRef<any>();
@@ -106,7 +105,7 @@ export default function Addteachers() {
               Email <span> * </span>
               <input type="email" ref={mail} />
             </div>
-            <div className="col-12 d-flex justify-content-center mt-3">
+            <div className="col-12 d-md-flex justify-content-center mt-3">
               <div className='me-3'>
                 NUmber <span> * </span>
                 <input type="number" ref={number} />
@@ -137,7 +136,7 @@ export default function Addteachers() {
               </form>
 
             </div>
-            <div className="col-12 d-flex mt-5  justify-content-evenly">
+            <div className="col-md-12 d-lg-flex mt-5  justify-content-evenly">
               <div>Qualification <span> * </span></div>
               <div className="col-2 text-center ms-2 dgre">
                 <p>Degree/Dimploma</p>

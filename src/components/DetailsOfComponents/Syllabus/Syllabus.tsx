@@ -16,7 +16,7 @@ export default function Syllabus() {
     get(refrence).then((dta: any) => {
       setsylabus(Object.values(dta.val()));
       setspiner(false)
-    }).catch((eror) => {
+    }).catch(() => {
       setspiner(false)
       setcls('')
       toast.error(`Syllabus Of ${cls} is not Present`)

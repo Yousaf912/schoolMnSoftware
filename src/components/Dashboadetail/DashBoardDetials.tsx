@@ -7,6 +7,7 @@ import { HiMiniUserGroup } from "react-icons/hi2";
 import { GiTeacher } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
 
+
 // import ClassshrtInfo from './classshrtInfo';
 
 
@@ -58,7 +59,7 @@ export default function DashboarDetails() {
                 </div>
                 <div className=' mt-3 border mb-5' >
                     <h1 className='text-center text-white  border mb-5 py-2' style={{backgroundColor:'#d3b428'}}>Chart View of present Students</h1>
-                    
+                   
                 </div>
                 <div className='col-7'>
                     {/* <ClassshrtInfo></ClassshrtInfo> */}

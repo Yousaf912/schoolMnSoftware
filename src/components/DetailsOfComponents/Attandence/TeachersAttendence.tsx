@@ -28,13 +28,11 @@ export default function TeacherAttendence() {
 
 
 const sendata =()=>{
-  const a= present.current.value;
-  const b = parseFloat(stdamount - a)
-  console.log(b);
+ 
   
   const obj={
-    prstd:present.current.value,
-    abstd:b,
+    prstd:parseInt(present.current.value) ,
+    abstd:parseInt(absent.current.value) ,
     date:dat.current.value
   }
   const refrence = ref(db,`teacherAttendence/${obj.date}`)
@@ -42,7 +40,10 @@ const sendata =()=>{
     toast.error("Add present Teachers");
   }  else if(obj.prstd > stdamount.length){
     toast.error(` Add correct Value total Teachers are ${stdamount.length}`);
-  }else if(!obj.date){
+  }else if((obj.abstd+obj.prstd)>stdamount.length){
+    toast.error("Add Correct value of absent Teachers")
+  }
+  else if(!obj.date){
     toast.error("Select Date")
   }
   else{
@@ -73,6 +74,10 @@ const sendata =()=>{
               <div className="d-flex justify-content-between">
                 Present Teachers:
                 <input type="number" style={{ width: '60%' }} ref={present} />
+              </div>
+              <div className="d-flex justify-content-between">
+                Absent Teachers:
+                <input type="number" style={{ width: '60%' }} ref={absent} />
               </div>
              
               <div className="d-flex justify-content-between mt-3 mt-md-0">

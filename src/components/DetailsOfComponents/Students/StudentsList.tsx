@@ -35,7 +35,7 @@ export default function StudentsDetails() {
       }else{
         contexval.setstudentdata([])
       }
-    }).catch((eror: any) => {
+    }).catch(() => {
       toast.error(`Students Of ${contexval.optval} not present`);
       // contexval.setoptval('')
       contexval.setstudentdata('')

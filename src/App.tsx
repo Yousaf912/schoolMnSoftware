@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from 'react';
-import style from './App.module.css';
 import './App.module.css'
 import { Store } from './components/ContexStore/contex';
 import Header from './components/Header';
@@ -47,8 +46,8 @@ function App() {
 
   return (
     <Store.Provider value={obj} >
-      <div className="container-fluid">
-        <div className="row mt-4 d-flex justify-content-between">
+      <div className="container-fluid border position-relative">
+        <div className="row mt-2 d-flex justify-content-between">
           <div className="col-md-4  col-lg-3 order-2 order-md-1">
             <Sidebar />
           </div>

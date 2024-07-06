@@ -169,7 +169,7 @@ useEffect((getTeachers),[])
 
                         </div>
                     </div>
-                    <button onClick={addsyllabus} className="btn col-3 mx-auto mt-4" style={{ backgroundColor: "#c3a931" }}>Submit Syllabus</button>
+                    <button onClick={addsyllabus} className="btn col-3 mx-auto mt-4" style={{ backgroundColor: "#c3a931" }}>Set Elocation</button>
                 </div>
             </div>
         </div>

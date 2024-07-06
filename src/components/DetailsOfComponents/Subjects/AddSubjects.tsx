@@ -45,7 +45,7 @@ export default function Subjects() {
     } else {
 
       const refrence = ref(db, `subjects/${obj.classname}`);
-      set(refrence, obj).then((suc) => {
+      set(refrence, obj).then(() => {
         toast.success(`Subject of ${obj.classname} is Added`);
         setclassnam('');
           sub1.current.value = '';

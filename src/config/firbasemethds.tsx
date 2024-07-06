@@ -1,4 +1,4 @@
-import { getDatabase, onValue, ref, set } from "firebase/database";
+import { getDatabase, ref, set } from "firebase/database";
 import app from "./firbaseconfig";
 
 const db = getDatabase(app);

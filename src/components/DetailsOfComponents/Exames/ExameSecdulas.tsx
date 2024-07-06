@@ -22,7 +22,7 @@ setspiner(false)
       get(refrence).then((dta: any) => {
         setsylabus(Object.values(dta.val()));
         setspiner(false)
-      }).catch((eror) => {
+      }).catch(() => {
        setspiner(false)
        toast.error(`Test date Of ${cls} is not present`);
        setcls('')
